@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/echarts.css">
+</head>
+<body>
+<!--头部导航-->
+<div class="content-nav">
+    <p>数据分析</p>
+</div>
+<!--性别分布-->
+<div id="div1" class="sex"></div>
+<!--年龄分布-->
+<div id="div2" class="sex"></div>
+<!--返回顶部-->
+<div class="return"></div>
+
+<script src="js/echarts.common.min.js"></script>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        var Chart1 = echarts.init(document.getElementById('div1'));
+        var Chart2 = echarts.init(document.getElementById('div2'));
+        // 指定图表的配置项和数据
+        Chart1.setOption({
+            title: {
+                text: '客户性别分布',
+                left:'center',
+                top:'10px',
+                textStyle: {
+                    color: '#2d8fd9',
+                    fontSize:20
+                }
+            },
+            legend:{
+                data:[{
+                    name: '男',
+                    icon: 'circle',
+                    textStyle: {
+                        color: '#295F9B'
+                    }
+                },
+                    {
+                        name: '女',
+                        icon: 'circle',
+                        textStyle: {
+                            color: '#c23531'
+                        }
+                    }
+                ],
+                left:'center',
+                bottom:'10px'
+            },
+            tooltip : {
+                trigger: 'item'
+
+            },
+            series : [
+                {
+                    name: '性别',
+                    type: 'pie',
+                    radius: '55%',
+                    label:{
+                        show:true,
+                        position:'inside',
+                        formatter:function(data)
+                        { return data.percent.toFixed(0)+"%";}
+
+                    },
+                    data:[
+                        {value:235, name:'男',itemStyle: {
+                            color: '#295F9B'}
+                        },
+                        {value:274, name:'女',itemStyle: {
+                            color: '#c23531'}
+                        }
+                    ]
+                }
+            ]
+        });
+        Chart2.setOption({
+            title: {
+                text: '客户年龄分布',
+                left:'center',
+                top:'10px',
+                textStyle: {
+                    color: '#2d8fd9',
+                    fontSize:20
+                }
+            },
+            legend:{
+                data:[{
+                    name: '80后',
+                    icon: 'circle',
+                    textStyle: {
+                        color: '#295F9B'
+                    }
+                },
+                    {
+                        name: '90后',
+                        icon: 'circle',
+                        textStyle: {
+                            color: '#c23531'
+                        }
+                    }
+                ],
+                left:'center',
+                bottom:'10px'
+            },
+            tooltip : {
+                trigger: 'item'
+
+            },
+            series : [
+                {
+                    name: '性别',
+                    type: 'pie',
+                    radius: '55%',
+                    label:{
+                        show:true,
+                        position:'inside',
+                        formatter:function(data)
+                        { return data.percent.toFixed(0)+"%";}
+
+                    },
+                    data:[
+                        {value:235, name:'80后',itemStyle: {
+                            color: '#295F9B'}
+                        },
+                        {value:274, name:'90后',itemStyle: {
+                            color: '#c23531'}
+                        }
+                    ]
+                }
+            ]
+        });
+
+        $(window).scroll(function () {
+            //获取网页的偏移位
+            var offset = $('html,body').scrollTop();
+            if(offset>0){
+                $('.return').css('display','block');
+            }else{
+                $('.return').css('display','none');
+            }
+        })
+
+    })
+
+</script>
+</body>
+</html>

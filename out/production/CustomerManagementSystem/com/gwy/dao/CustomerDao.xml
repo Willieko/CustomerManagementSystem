@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gwy.dao.CustomerDao">
+    <!-- 查询客户 -->
+    <select id="getAllCustomers"  resultType="customer">
+        select * from customer
+    </select>
+
+    <!-- 删除客户 -->
+    <delete id="deleteCustomers" parameterType="Integer">
+        delete from customer where id=#{id}
+    </delete>
+
+    <!-- 新增客户 -->
+    <insert id="addCustomers" parameterType="customer">
+        insert into customer(name,sex,birthdate,telephone,qqnumber,job,hobby,address,remark)
+        values(#{name},#{sex},#{birthdate},#{telephone},#{qqnumber},#{job},#{hobby},#{address},#{remark})
+    </insert>
+
+    <!-- 根据ID查询客户 -->
+    <select id="getCustomersWithId" parameterType="String" resultType="customer">
+        select * from customer where id=#{id}
+    </select>
+
+    <!-- 更新客户信息 -->
+    <update id="updateCustomers" parameterType="customer">
+        update customer set name=#{name},sex=#{sex},birthdate=#{birthdate},telephone=#{telephone},qqnumber=#{qqnumber},job=#{job},hobby=#{hobby},
+                            address=#{address},remark=#{remark} where id=#{id}
+    </update>
+</mapper>

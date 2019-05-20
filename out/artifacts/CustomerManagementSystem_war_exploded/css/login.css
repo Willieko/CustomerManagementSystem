@@ -1,0 +1,234 @@
+.page{
+    width: 100%;
+    height: 100%;
+    background: url("../image/loginback.jpg") no-repeat center;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+.page p{
+    text-align: center;
+    font-size: 50px;
+    color: #034477;
+}
+.lg-page{
+    width: 450px;
+    height: 350px;
+    background-color: rgba(111, 128, 149, 0.7);
+    border: 1px solid #2d8fd9;
+    margin:80px auto;
+    box-sizing: border-box;
+    position: relative;
+}
+.login-panel{
+    width: 360px;
+    height: 260px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top:53px;
+    margin-left:-180px;
+    border: 1px solid #FFFFFF;
+    display: block;
+}
+.login-panel div,.regist-panel div{
+    width: 300px;
+    height: 40px;
+    box-sizing: border-box;
+    margin: 10px auto 10px;
+}
+.login-panel p{
+    text-align: center;
+    color: red;
+    font-size: 15px;
+    margin:20px auto 10px;
+}
+.login-panel div input,.regist-panel div input{
+    height: 40px;
+    width: 300px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    outline: none;
+    padding-left: 32px;
+    color: white;
+    font-size: 17px;
+    border: 1px solid #000000;
+}
+.login-panel div input:focus,.regist-panel div input:focus{
+    border: 1px solid #FFFFFF;
+}
+.login-panel span{
+    color: white;
+    font-size: 16px;
+}
+.login-panel .checkbox{
+    width: 18px;
+    height: 18px;
+    vertical-align:middle;
+    margin:10px auto 10px 30px;
+    cursor: pointer;
+}
+.lg-page .username{
+    background:url("../image/username.png") no-repeat  6px center #000000;
+    background-size: 16px 16px;
+}
+.lg-page .password{
+    background:url("../image/password.png") no-repeat 6px center  #000000;
+    background-size: 16px 16px;
+}
+.lg-page .telephone{
+    background:url("../image/phoneicon.png") no-repeat 6px center  #000000;
+    background-size: 16px 16px;
+}
+.lg-page .code{
+    width: 180px;
+    height: 45px;
+    float: left;
+    background:url("../image/codeicon.png") no-repeat 6px center  #000000;
+    background-size: 16px 16px;
+}
+.login-btn,.regist-btn{
+    width: 300px;
+    height: 33px;
+    margin: 15px auto 10px 30px;
+    border-radius: 4px;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    background-color:#1E90FF;
+    border: none;
+    cursor: pointer;
+}
+.regist-panel{
+    width: 360px;
+    height: 355px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top:53px;
+    margin-left:-180px;
+    border: 1px solid #FFFFFF;
+    display: none;
+}
+.lg-page .thecode{
+    width: 300px;
+    height: 45px;
+    box-sizing: border-box;
+    margin: 10px auto 20px;
+}
+.regist-panel img{
+    width: 110px;
+    height: 45px;
+    float: right;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.regist-panel p{
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    margin-bottom: 5px;
+}
+.lg-page .lg-tab{
+    width: 130px;
+    height: 37px;
+    position: absolute;
+    left: 50%;
+    margin-left:-65px;
+    top: 6px;
+    text-align: center;
+    color: #cccccc;
+    font-size: 20px;
+}
+.lg-page .lg-tab span{
+    width: 60px;
+    height: 100%;
+    font-size: 24px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+.lg-page .lg-tab .current{
+    border-bottom: 2px solid orangered;
+    color: orangered;
+}
+.mb{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.service{
+    width: 600px;
+    height: 520px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #1a82c3;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    margin-left: -300px;
+    top: 80px;
+    z-index: 6;
+    display: none;
+}
+.service .service-header{
+    width: 100%;
+    height: 40px;
+    background-color: #2e90d9;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    line-height: 40px;
+    position: relative;
+}
+.service .service-header span{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 11px;
+    right: 7px;
+    background:url("../image/close.png") no-repeat center center;
+    background-size: 70% 70%;
+    cursor: pointer;
+}
+.service .service-content{
+    width: 550px;
+    height: 400px;
+    background-color: #e7eef3;
+    margin: 20px auto;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.service .service-content h1{
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    color: #444444;
+}
+.service .service-content p{
+    font-size: 14px;
+    text-indent: 2em;
+    color: #4c4c4c;
+    margin-top: 10px;
+    text-align: left;
+}
+.service .service-content h2{
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #444444;
+}
+.service input{
+    display: block;
+    width: 60px;
+    height: 30px;
+    background-color: #1a82c3;
+    border: none;
+    outline: none;
+    margin:0 auto;
+    cursor: pointer;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/maincontent.css">
+</head>
+<body>
+<!--蒙版-->
+<div class="page"></div>
+<!--头部导航-->
+<div class="content-nav">
+    <p>客户管理</p>
+</div>
+<!--操作面板-->
+<div class="operation">
+    <input id="add_btn" class="add-btn" type="button" value="＋新增">
+    <div class="cust-search"><input type="text"><input type="button" value="☯查找"></div>
+</div>
+<!--客户面板-->
+<div class="customer">
+    <div class="customer-table">
+    <ul class="customer-headline">
+        <li>序号</li>
+        <li>姓名</li>
+        <li>性别</li>
+        <li>出生年月</li>
+        <li>手机号码</li>
+        <li>QQ号码</li>
+        <li>职业</li>
+        <li>爱好</li>
+        <li>住址</li>
+        <li>备注</li>
+        <li>操作</li>
+    </ul>
+    <ul class="customer-data">
+        <li>001</li>
+        <li>吕光宝</li>
+        <li>男</li>
+        <li>1996-05-20</li>
+        <li>156800680263</li>
+        <li>8057359233</li>
+        <li>黑社会</li>
+        <li>打黑拳</li>
+        <li>成都市锦江区天府国际11栋</li>
+        <li>此人没有头发此人没有头发此人没有头发此人没有头发此人没有头发此人没有头发</li>
+        <li>
+            <input id="edit_btn" type="button" value="修改">
+            <input type="button" value="删除">
+        </li>
+    </ul>
+    </div>
+</div>
+<!--新增面板-->
+<div id="add_panel" class="add-panel">
+    <div id="add_close" class="close"></div>
+    <div class="line"></div>
+    <div class="add-panel-in">
+        <form action="#" id="add_form" method="post">
+        <div><label >姓&emsp;&emsp;名:</label><input type="text" name="name" autocomplete="off"></div>
+        <div>
+            <label >性&emsp;&emsp;别:</label>
+            <select name="sex">
+            <option value="男">男</option>
+            <option value="女">女</option>
+            </select>
+        </div>
+        <div><label >出生年月:</label><input type="date" name="birthdate"></div>
+        <div><label >电话号码:</label><input type="number" name="telephone" autocomplete="off"></div>
+        <div><label >QQ&nbsp;号码:</label><input type="number" name="qqnumber" autocomplete="off"></div>
+        <div>
+            <label >职&emsp;&emsp;业:</label>
+            <select name="job">
+                <option value="IT/互联网">IT/互联网</option>
+                <option value="金融">金融</option>
+                <option value="行政">行政</option>
+                <option value="学生">学生</option>
+            </select>
+        </div>
+        <div><label >爱&emsp;&emsp;好:</label><input type="text" name="hobby" autocomplete="off"></div>
+        <div><label >住&emsp;&emsp;址:</label><input type="text" name="address" autocomplete="off"></div>
+        <div><label >备&emsp;&emsp;注:</label><textarea maxlength="45" name="remark" class="remark"></textarea></div>
+        <div class="btns"><input id="add_sure" type="button" value="确认"><input type="reset"></div>
+        </form>
+    </div>
+</div>
+<!--编辑面板-->
+<div id="edit_panel" class="add-panel">
+    <div id="edit_close" class="close"></div>
+    <div class="line"></div>
+    <div class="add-panel-in">
+        <form action="#" id="edit_form" method="post">
+            <div><label >姓&emsp;&emsp;名:</label><input type="text" name="name" autocomplete="off"></div>
+            <div>
+                <label >性&emsp;&emsp;别:</label>
+                <select name="sex">
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                </select>
+            </div>
+            <div><label >出生年月:</label><input type="date" name="birthdate"></div>
+            <div><label >电话号码:</label><input type="number" name="telephone" autocomplete="off"></div>
+            <div><label >QQ&nbsp;号码:</label><input type="number" name="qqnumber" autocomplete="off"></div>
+            <div>
+                <label >职&emsp;&emsp;业:</label>
+                <select name="job">
+                    <option value="IT/互联网">IT/互联网</option>
+                    <option value="金融">金融</option>
+                    <option value="行政">行政</option>
+                    <option value="学生">学生</option>
+                </select>
+            </div>
+            <div><label >爱&emsp;&emsp;好:</label><input type="text" name="hobby" autocomplete="off"></div>
+            <div><label >住&emsp;&emsp;址:</label><input type="text" name="address" autocomplete="off"></div>
+            <div><label >备&emsp;&emsp;注:</label><textarea maxlength="45" name="remark" class="remark"></textarea></div>
+            <div class="btns"><input id="edit_sure" type="button" value="确认"><input type="reset"></div>
+        </form>
+    </div>
+</div>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/maincontent.js"></script>
+</body>
+</html>

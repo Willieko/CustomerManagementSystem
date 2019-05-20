@@ -1,0 +1,28 @@
+.info{
+    width: 300px;
+    height: 260px;
+    border: 1px solid #2d8fd9;
+    text-align: center;
+    padding-top: 60px;
+    margin: 80px auto;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.info p{
+    color:#2d8fd9;
+    font-size: 22px;
+}
+.info a{
+    display: inline-block;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 6px;
+    background-color: #2e90d9;
+    border: none;
+    outline: none;
+    margin-top: 70px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}

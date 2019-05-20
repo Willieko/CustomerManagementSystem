@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gwy.dao.EchartsDao">
+    <!-- 查询人数 -->
+    <select id="getNums" resultType="Echart">
+        select DISTINCT (select count(*) from customer where sex='女') as femaleNums,(select count(*) from customer where sex='男') as maleNums from customer
+    </select>
+
+    <!-- 查询年龄 -->
+    <select id="getYear" resultType="Echart">
+        select YEAR(birthdate) as year from customer
+    </select>
+</mapper>
